@@ -6,7 +6,7 @@ class ScanDetails {
   final String time;
   final String day;
   final String date;
-  final String uid;
+  final String uid;// userid
   final String? suggestions;
 
   ScanDetails({

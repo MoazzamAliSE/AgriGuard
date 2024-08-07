@@ -7,7 +7,7 @@ import 'package:agri_guard/models/scan_model.dart';
 import 'package:agri_guard/view/history/history_details.dart';
 
 class HistoryPage extends StatelessWidget {
-  const HistoryPage({Key? key}) : super(key: key);
+  const HistoryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +103,9 @@ class HistoryPage extends StatelessWidget {
                         backgroundImage: CachedNetworkImageProvider(
                             historyData[index].imageUrl),
                       ),
-                      title: Text(historyData[index].day),
+                      title: Text(
+                          "${historyData[index].day}\n${historyData[index].diagnosedLabel}"),
+                      isThreeLine: true,
                       subtitle: Text(historyData[index].date),
                     ),
                   ),

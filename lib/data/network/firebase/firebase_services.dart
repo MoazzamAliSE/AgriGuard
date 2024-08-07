@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -6,7 +7,7 @@ import 'package:agri_guard/data/network/firebase/auth_services.dart';
 import 'package:agri_guard/main.dart';
 import 'package:agri_guard/models/scan_model.dart';
 import 'package:agri_guard/models/user_model.dart';
-import 'package:agri_guard/res/app_collections.dart';
+import 'package:agri_guard/resources/app_collections.dart';
 
 class FirebaseStorageService {
   final FirebaseStorage _storage = FirebaseStorage.instance;
@@ -25,7 +26,7 @@ class FirebaseStorageService {
       String downloadURL = await snapshot.ref.getDownloadURL();
       return downloadURL;
     } catch (e) {
-      print('Error uploading image: $e');
+      log('Error uploading image: $e');
     }
     return null;
   }
@@ -44,7 +45,7 @@ class FirebaseFirestoreService {
       final userModel = UserModel.fromMap(userSnapshot as Map<String, dynamic>);
       return userModel;
     } catch (e) {
-      print("error in userModel $e");
+      log("error in userModel $e");
       return null;
     }
   }
@@ -78,7 +79,7 @@ class FirebaseFirestoreService {
           .doc(scanDetails.scanId)
           .set(scanDetails.toMap());
     } catch (e) {
-      print('Error saving scan details: $e');
+      log('Error saving scan details: $e');
     }
   }
 }

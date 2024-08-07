@@ -54,10 +54,11 @@ class ScanController extends GetxController {
     'stem',
     'potato',
     'potato plant',
-    'potato field',
+    'Agri Guard',
     'crop',
     'farm',
     'garden',
+    'pattern',
     'agriculture',
     'insect'
   ];
@@ -84,7 +85,7 @@ class ScanController extends GetxController {
       _imageFile = File(image.path);
       return labelsText;
     } catch (e) {
-      print("Error processing image: $e");
+      log("Error processing image: $e");
       return ["other"];
     }
   }
@@ -95,9 +96,7 @@ class ScanController extends GetxController {
     // Preprocess the resized image
     final int width = resizedImage.width;
     final int height = resizedImage.height;
-    final inputArray = Float32List(width *
-        height *
-        3); //run krna ab isko zra agr wo inference wala code copy paste kr dia ha yha
+    final inputArray = Float32List(width * height * 3);
     for (int y = 0; y < height; y++) {
       for (int x = 0; x < width; x++) {
         final pixelIndex = (y * width + x) * 3;
@@ -123,7 +122,7 @@ class ScanController extends GetxController {
 
     // Run inference on the model
     final outputBuffer =
-        Float32List(15 * 1); // Create output buffer with correct shape [3, 1]
+        Float32List(15 * 1); // Create output buffer with correct shape [15, 1]
 
     // Reshape the output buffer to match the expected shape [1, 3]
     final reshapedOutputBuffer = outputBuffer.reshape([1, 15]);
@@ -141,6 +140,7 @@ class ScanController extends GetxController {
       }
     }
 
+    /// [60,87,99,66,55]
     // Map index to label
     String predictionLabel = '';
     switch (maxIndex) {
@@ -210,7 +210,6 @@ class ScanController extends GetxController {
 
     // Load the model from assets
     _interpreter = await Interpreter.fromAsset(
-      // 'assets/model/tf_lite_agri_guardModel.tflite',
       'assets/model/tf_lite_vegetable.tflite',
       options: interpreterOptions,
     );
@@ -264,26 +263,10 @@ class ScanController extends GetxController {
         update();
       }
 
-      // Perform inference with the selected image
-      log('Performed inference'); // Log that inference was performed
+      log('Performed inference');
     }
   }
 
-  // void cleanResult() {
-  //   // imagePath = null;
-  //   // image = null;
-  //   update();
-  // }
-
-  // Future<void> processImage() async {
-  //   if (imagePath != null) {
-  //     // Read image bytes from file
-  //     final imageData = File(imagePath!).readAsBytesSync();
-
-  //     // Decode image using package:image/image.dart (https://pub.dev/image)
-  //     image = img.decodeImage(imageData);
-  //   }
-  // }
   @override
   void dispose() {
     _imageLabeler.close();

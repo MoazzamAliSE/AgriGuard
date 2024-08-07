@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:agri_guard/res/app_color.dart';
-import 'package:agri_guard/res/app_text_styles.dart';
+import 'package:agri_guard/resources/app_color.dart';
+import 'package:agri_guard/resources/app_text_styles.dart';
 import 'package:agri_guard/view_model/services/splash_services.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -49,7 +49,7 @@ class _SplashScreenState extends State<SplashScreen> {
                           width: 250,
                         ),
                         Text(
-                          "Potato Field classification",
+                          "Agri Guard",
                           style: primary20BoldTextStyle,
                         )
                       ],

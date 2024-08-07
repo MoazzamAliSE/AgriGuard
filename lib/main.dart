@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:agri_guard/firebase_options.dart';
 import 'package:agri_guard/models/user_model.dart';
-import 'package:agri_guard/res/routes/app_routes.dart';
+import 'package:agri_guard/resources/routes/app_routes.dart';
 import 'package:agri_guard/view/splash/splash_screen.dart';
 import 'package:agri_guard/view_model/theme/app_theme.dart';
 

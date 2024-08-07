@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:agri_guard/res/app_color.dart';
+import 'package:agri_guard/resources/app_color.dart';
 
 class WhiteBGTextButton extends StatelessWidget {
   const WhiteBGTextButton({

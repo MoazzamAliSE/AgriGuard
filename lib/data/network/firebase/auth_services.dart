@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import 'package:agri_guard/data/shared/shared_pref.dart';
 import 'package:agri_guard/main.dart';
 import 'package:agri_guard/models/user_model.dart';
-import 'package:agri_guard/res/app_collections.dart';
+import 'package:agri_guard/resources/app_collections.dart';
 import 'package:agri_guard/utils/utils.dart';
 import 'package:agri_guard/view/get_started/get_started.dart';
 import 'package:agri_guard/view/home/home_screen.dart';
@@ -78,7 +78,7 @@ class FirebaseAuthService {
             Icons.warning_amber,
             color: Colors.red,
           ));
-      print('Error signing in: $e');
+      log('Error signing in: $e');
       return null;
     }
   }

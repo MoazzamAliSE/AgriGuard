@@ -5,7 +5,7 @@ import 'package:agri_guard/data/shared/shared_pref.dart';
 import 'package:agri_guard/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../res/routes/routes.dart';
+import '../../resources/routes/routes.dart';
 
 class SplashServices {
   static checkLogin() async {

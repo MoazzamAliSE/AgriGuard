@@ -1,10 +1,7 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/material.dart';
 import 'package:agri_guard/data/network/firebase/auth_services.dart';
-import 'package:agri_guard/res/app_color.dart';
 import 'package:agri_guard/view/home/components/home_buttons.dart';
 import 'package:agri_guard/view/home/components/home_upper_section.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,7 +11,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Potato Field classification',
+          'Agri Guard',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
         ),
         centerTitle: true,

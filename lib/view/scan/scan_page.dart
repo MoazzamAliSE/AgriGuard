@@ -6,7 +6,7 @@ import 'package:agri_guard/view/scan/scan_detail.dart';
 import 'package:agri_guard/view/widgets/buttons.dart';
 
 class ScanPage extends StatelessWidget {
-  ScanPage({Key? key}) : super(key: key);
+  ScanPage({super.key});
   final controller = Get.put(ScanController());
 
   @override

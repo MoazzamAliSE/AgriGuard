@@ -7,7 +7,7 @@ import 'package:intl/intl.dart';
 import 'package:agri_guard/data/network/firebase/auth_services.dart';
 import 'package:agri_guard/models/scan_model.dart';
 import 'package:agri_guard/data/network/firebase/firebase_services.dart';
-import 'package:agri_guard/res/constants.dart';
+import 'package:agri_guard/resources/constants.dart';
 import 'package:agri_guard/utils/utils.dart';
 import 'package:agri_guard/view/home/home_screen.dart';
 import 'package:agri_guard/view/widgets/buttons.dart';

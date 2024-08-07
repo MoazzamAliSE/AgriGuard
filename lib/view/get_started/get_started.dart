@@ -44,7 +44,7 @@ class GetStarted extends StatelessWidget {
                     padding: EdgeInsets.only(top: 12),
                     child: Center(
                       child: Text(
-                        "Your journey to potato leave health begins\nhere. Login and discover",
+                        "Your journey to plants leave health begins\nhere. Login and discover",
                         style: TextStyle(fontSize: 16, letterSpacing: 0.5),
                         textAlign: TextAlign.center,
                       ),

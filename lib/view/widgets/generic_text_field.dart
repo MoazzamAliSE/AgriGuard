@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:agri_guard/res/app_color.dart';
+import 'package:agri_guard/resources/app_color.dart';
 
 class GenericTextFormField extends StatelessWidget {
   final TextEditingController? controller;

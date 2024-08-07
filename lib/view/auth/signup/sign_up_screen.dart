@@ -38,41 +38,42 @@ class SignUpScreen extends StatelessWidget {
                           height: 100,
                           width: 100,
                         ),
-                        Obx(() => GestureDetector(
-                              onTap: () => controller.picImage(),
-                              child: CircleAvatar(
-                                radius: 50,
-                                backgroundImage: controller
-                                        .profilePicture.isEmpty
-                                    ? null
-                                    : FileImage(
-                                        File(controller.profilePicture.value)),
-                                child: controller.profilePicture.isEmpty
-                                    ? const Center(
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            Icon(
-                                              Icons.person,
-                                              color: Colors.white,
-                                              size: 40,
-                                            ),
-                                            Text(
-                                              'Pic Image',
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.bold),
-                                            )
-                                          ],
-                                        ),
-                                      )
-                                    : null,
-                              ),
-                            ))
+                        Obx(
+                          () => GestureDetector(
+                            onTap: () => controller.picImage(),
+                            child: CircleAvatar(
+                              radius: 50,
+                              backgroundImage: controller.profilePicture.isEmpty
+                                  ? null
+                                  : FileImage(
+                                      File(controller.profilePicture.value)),
+                              child: controller.profilePicture.isEmpty
+                                  ? const Center(
+                                      child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.person,
+                                            color: Colors.white,
+                                            size: 40,
+                                          ),
+                                          Text(
+                                            'Pic Image',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  : null,
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),

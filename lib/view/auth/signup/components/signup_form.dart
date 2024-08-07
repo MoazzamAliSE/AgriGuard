@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:agri_guard/res/app_text_styles.dart';
+import 'package:agri_guard/resources/app_text_styles.dart';
 import 'package:agri_guard/view_model/controllers/signup_controller.dart';
 
 class SignUpForm extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:agri_guard/res/routes/routes.dart';
+import 'package:agri_guard/resources/routes/routes.dart';
 import 'package:agri_guard/view/auth/login_screen.dart';
 import 'package:agri_guard/view/auth/signup/sign_up_screen.dart';
 import 'package:agri_guard/view/get_started/get_started.dart';
@@ -15,7 +15,6 @@ class AppRoutes {
       GetPage(name: Routes.signUpScreen, page: () => SignUpScreen()),
       GetPage(name: Routes.signInScreen, page: () => LoginScreen()),
       GetPage(name: Routes.home, page: () => const HomeScreen()),
-      // GetPage(name: Routes.profilePicture, page: () => profile()),
     ];
   }
 }

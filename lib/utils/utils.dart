@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:photo_view/photo_view.dart';
-import '../res/app_color.dart';
+import '../resources/app_color.dart';
 
 class Utils {
   static bool validateEmail(String email) {

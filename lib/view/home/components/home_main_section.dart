@@ -2,7 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:agri_guard/models/scan_model.dart';
-import 'package:agri_guard/res/app_color.dart';
+import 'package:agri_guard/resources/app_color.dart';
 import 'package:agri_guard/view/home/home_controller.dart';
 import 'package:agri_guard/view/home/scan_list/scan_list_page.dart';
 

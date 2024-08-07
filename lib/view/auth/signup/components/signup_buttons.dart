@@ -17,12 +17,6 @@ class SignupButtons extends StatelessWidget {
                 text: "SignUp",
                 loading: Get.put(SignupController()).loading.value,
                 onPressed: () async {
-                  // UserCredential? userCredential =
-                  //     await FirebaseAuthService.createAccount();
-                  // Navigator.pushReplacement(
-                  //   context,
-                  //   MaterialPageRoute(builder: (context) => const HomeScreen()),
-                  // );
                   Get.put(SignupController()).createAccount();
                 },
               )),

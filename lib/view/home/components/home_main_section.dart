@@ -22,10 +22,8 @@ class _HomeMainSectionState extends State<HomeMainSection> {
       height: 250,
       child: LineChart(
         LineChartData(
-          // Placeholder data for demonstration
           titlesData: const FlTitlesData(
-              // leftTitles: SideTitles(showTitles: false),
-              // bottomTitles: SideTitles(showTitles: false),
+  
               ),
           borderData: FlBorderData(show: false),
           lineBarsData: [

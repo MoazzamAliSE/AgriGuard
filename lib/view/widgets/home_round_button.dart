@@ -6,11 +6,11 @@ class RoundedImageButton extends StatelessWidget {
   final VoidCallback onPressed;
 
   const RoundedImageButton({
-    Key? key,
+    super.key,
     required this.text,
     required this.imagePath,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

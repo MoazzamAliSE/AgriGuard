@@ -23,8 +23,6 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: skinColor,
-      // backgroundColor: const Color.fromARGB(255, 63, 63, 63),
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -64,22 +62,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-
-// class LoginSignupScreen extends StatelessWidget {
-//   const LoginSignupScreen({
-//     super.key,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     // Build your login/signup screen UI here
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: const Text('Login / Signup'),
-//       ),
-//       body: const Center(
-//         child: Text('Login and Signup UI goes here'),
-//       ),
-//     );
-//   }
-// }

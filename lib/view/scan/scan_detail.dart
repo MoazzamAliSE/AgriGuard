@@ -17,11 +17,11 @@ class ScanDetailPage extends StatefulWidget {
   final String percentageDiagnose;
   final String diagnosedLabel;
   const ScanDetailPage({
-    Key? key,
+    super.key,
     required this.imageFile,
     required this.percentageDiagnose,
     required this.diagnosedLabel,
-  }) : super(key: key);
+  });
 
   @override
   State<ScanDetailPage> createState() => _ScanDetailPageState();

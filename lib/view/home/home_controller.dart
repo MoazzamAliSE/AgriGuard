@@ -8,7 +8,6 @@ class HomeController extends GetxController {
   List<ScanDetails> scanDetailsList = [];
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
     // Fetch user name and scan details when the widget is initialized
     FirebaseFirestoreService.fetchUserData();

@@ -22,7 +22,7 @@ class GenericTextFormField extends StatelessWidget {
   final void Function(String)? onChanged;
   final void Function(String?)? onSaved;
   const GenericTextFormField({
-    Key? key,
+    super.key,
     this.controller,
     this.labelText,
     this.hintText,
@@ -42,7 +42,7 @@ class GenericTextFormField extends StatelessWidget {
     this.borderColor,
     this.cursorColor = whiteColor,
     this.onSaved,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

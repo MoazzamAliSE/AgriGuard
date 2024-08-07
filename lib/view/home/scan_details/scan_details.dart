@@ -5,9 +5,9 @@ class ScanDetailsPage extends StatelessWidget {
   final ScanDetails scanData;
 
   const ScanDetailsPage({
-    Key? key,
+    super.key,
     required this.scanData,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

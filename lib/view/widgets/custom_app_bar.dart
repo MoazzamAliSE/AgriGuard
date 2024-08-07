@@ -17,7 +17,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       automaticallyImplyLeading: automaticallyImplyLeading ?? true,
       centerTitle: true,
-      // backgroundColor: darkBackgroundColor,
       foregroundColor: whiteColor,
       actions: [
         if (onPressed != null)
